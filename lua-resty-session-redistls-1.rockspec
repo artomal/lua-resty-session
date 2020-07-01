@@ -1,7 +1,8 @@
 package = "lua-resty-session"
-version = "dev-1"
+version = "redistls-1"
 source = {
-    url = "git://github.com/bungle/lua-resty-session.git"
+    url = "git://github.com/artomal/lua-resty-session.git",
+    branch = "feat/redis-cluster-tls"
 }
 description = {
     summary = "Session Library for OpenResty – Flexible and Secure",
@@ -11,7 +12,8 @@ description = {
     license = "BSD"
 }
 dependencies = {
-    "lua >= 5.1"
+    "lua >= 5.1",
+    "kong-redis-cluster == redistls-1"
 }
 build = {
     type = "builtin",

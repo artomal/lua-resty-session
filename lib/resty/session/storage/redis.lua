@@ -186,6 +186,8 @@ function storage.new(session)
             keepalive_cons     = tonumber(pool.size,               10) or defaults.pool.size,
             max_redirection    = tonumber(cluster.maxredirections, 10) or defaults.cluster.maxredirections,
             serv_list          = cluster_nodes,
+            ssl                = config.ssl or defaults.ssl,
+            ssl_verify         = config.ssl_verify or defaults.ssl_verify,
         })
         self.cluster = true
 
